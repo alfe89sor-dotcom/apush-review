@@ -26,6 +26,27 @@
     footer { background: #1f3a5f; color: #fff; text-align: center; padding: 15px; }
     .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: #eef2f7; padding: 1px 6px; border-radius: 6px; }
     .tight ul { margin-top: 6px; }
+
+    /* Quiz UI */
+    .quizShell { background: #fff; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.10); padding: 16px; margin: 18px 0; }
+    .quizTop { display:flex; flex-wrap:wrap; gap: 10px; align-items:center; justify-content: space-between; }
+    .quizBtns { display:flex; flex-wrap:wrap; gap: 8px; }
+    button { border: none; cursor: pointer; padding: 10px 12px; border-radius: 10px; font-weight: 700; }
+    .btn { background: #162a44; color: #fff; }
+    .btnAlt { background: #e8f1ff; color: #162a44; border: 1px solid #c7d7f4; }
+    .btnSmall { padding: 8px 10px; border-radius: 10px; font-weight: 700; }
+    .quizMeta { color:#334; font-size: 14px; }
+    .qCard { background: #f8fafc; border: 1px solid #e3e9f2; border-radius: 12px; padding: 14px; margin-top: 12px; }
+    .qStem { font-weight: 800; margin-bottom: 10px; }
+    .choices { display:grid; gap: 10px; }
+    .choice { background:#fff; border:1px solid #d6e0ee; padding: 10px 12px; border-radius: 12px; cursor:pointer; }
+    .choice:hover { border-color:#162a44; }
+    .choice.correct { border-color:#0a7a2f; background:#eef9f1; }
+    .choice.incorrect { border-color:#b00020; background:#fdecef; }
+    .explain { margin-top: 10px; padding: 10px 12px; border-radius: 12px; background:#fff; border: 1px solid #d6e0ee; }
+    .pillRow { display:flex; flex-wrap:wrap; gap: 8px; margin-top: 10px; }
+    .pill { background:#eef2f7; padding: 6px 10px; border-radius: 999px; font-size: 12px; color:#233; }
+    .hidden { display:none; }
   </style>
 </head>
 <body>
@@ -236,7 +257,6 @@
 
 <section id="period1">
   <h2>Period 1: 1491–1607</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Key Ideas</h3>
@@ -255,10 +275,8 @@
       </ol>
     </div>
   </div>
-
   <h3>Student-Friendly Explanation</h3>
   <p>Native societies were complex and adapted to their regions. European contact caused massive biological and cultural change, especially through disease and new economic systems.</p>
-
   <div class="grid">
     <div class="card">
       <h3>Key Vocabulary (Plain English)</h3>
@@ -276,52 +294,18 @@
       </ul>
     </div>
   </div>
-
-  <h3>DBQ/LEQ Skills for This Period</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Possible DBQ Prompt</h4>
-      <p>Evaluate the extent to which European contact transformed Indigenous societies in the Americas from 1491 to 1607.</p>
-      <h4>Thesis Starter</h4>
-      <p class="kbd">Although ___, European contact transformed Indigenous societies to a great extent because ___ and ___, leading to ___.</p>
-    </div>
-    <div class="card">
-      <h4>Possible LEQ Prompt</h4>
-      <p>Compare the goals and methods of Spanish colonization with those of another European power before 1607.</p>
-      <h4>Evidence Bank</h4>
-      <ul>
-        <li>Spanish: encomienda, mining, missions</li>
-        <li>Other powers: trade posts, settlement patterns</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="practice">
-    <strong>Practice MC:</strong><br />
-    Which factor most influenced differences among Native American societies?
-    <ol type="A">
-      <li>Religion</li>
-      <li>European trade</li>
-      <li>Geography and climate</li>
-      <li>Military technology</li>
-    </ol>
-    <div class="answer">
-      <strong>Correct Answer: C</strong><br />
-      <p>Environment determined food sources, housing, and social structure long before Europeans arrived.</p>
-    </div>
-  </div>
+  <div class="quizShell" data-period="period1"></div>
 </section>
 
 <section id="period2">
   <h2>Period 2: 1607–1754</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Key Ideas</h3>
       <ul>
-        <li>Different colonial regions developed different economies</li>
-        <li>Slavery expanded, especially where plantation cash crops dominated</li>
-        <li>Salutary neglect encouraged colonial self-government</li>
+        <li>Regional economies shaped colonial life</li>
+        <li>Slavery expanded, especially in plantation zones</li>
+        <li>Salutary neglect encouraged colonial autonomy</li>
       </ul>
     </div>
     <div class="card">
@@ -329,200 +313,95 @@
       <ol>
         <li><strong>Trend:</strong> regional economies (NE trade / Middle farms / South plantations)</li>
         <li><strong>Tension:</strong> labor needs vs ideals (freedom vs slavery)</li>
-        <li><strong>Turning point:</strong> growing autonomy under salutary neglect</li>
+        <li><strong>Turning point:</strong> self-government grows under salutary neglect</li>
       </ol>
     </div>
   </div>
-
   <div class="grid">
     <div class="card">
       <h3>Key Vocabulary (Plain English)</h3>
       <ul>
-        <li><strong>Salutary neglect:</strong> Britain loosely enforced laws, letting colonies run themselves</li>
-        <li><strong>Triangular trade:</strong> Atlantic trade network linking Europe, Africa, and the Americas</li>
-        <li><strong>Chattel slavery:</strong> slavery where people are treated as property</li>
+        <li><strong>Salutary neglect:</strong> loose enforcement that let colonies govern themselves</li>
+        <li><strong>Triangular trade:</strong> Atlantic trade network linking Europe, Africa, Americas</li>
+        <li><strong>Chattel slavery:</strong> slavery treating people as property</li>
       </ul>
     </div>
     <div class="card">
       <h3>Common Misconceptions</h3>
       <ul>
-        <li>Myth: “Slavery was always equally common everywhere.” Reality: it grew fastest where cash crops required huge labor.</li>
-        <li>Myth: “Colonies had no self-government.” Reality: assemblies existed early (House of Burgesses, town meetings).</li>
+        <li>Myth: “Slavery was equally common everywhere.” Reality: fastest growth where cash crops dominated.</li>
+        <li>Myth: “No colonial self-government.” Reality: assemblies existed early.</li>
       </ul>
     </div>
   </div>
-
-  <h3>DBQ/LEQ Skills for This Period</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Possible DBQ Prompt</h4>
-      <p>Analyze the ways economic systems shaped colonial society in British North America from 1607 to 1754.</p>
-      <h4>Thesis Starter</h4>
-      <p class="kbd">Colonial economic systems shaped society by ___ and ___, which resulted in ___.</p>
-    </div>
-    <div class="card">
-      <h4>Possible LEQ Prompt</h4>
-      <p>Evaluate the extent to which religion shaped colonial development in British North America.</p>
-      <h4>Evidence Bank</h4>
-      <ul>
-        <li>Puritans, Great Awakening, religious toleration (or lack of it)</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="practice">
-    <strong>Practice (Short Answer):</strong><br />
-    Why did slavery expand most rapidly in the Southern colonies?
-    <div class="answer">
-      <strong>Answer Explanation:</strong> Plantation agriculture (tobacco, rice, indigo) required a large, permanent labor force. Enslaved labor became the most profitable and controllable system for planters.
-    </div>
-  </div>
+  <div class="quizShell" data-period="period2"></div>
 </section>
 
 <section id="period3">
   <h2>Period 3: 1754–1800</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Key Ideas</h3>
       <ul>
-        <li>French & Indian War increased British debt and changed empire policy</li>
-        <li>Colonial resistance grew: taxation, representation, and rights</li>
-        <li>New nation struggled to balance liberty with order</li>
+        <li>French & Indian War reshaped British imperial policy</li>
+        <li>Colonial resistance grew (taxation, representation, rights)</li>
+        <li>New nation debated liberty vs order</li>
       </ul>
     </div>
     <div class="card">
       <h3>Remember 3 Things</h3>
       <ol>
-        <li><strong>Trend:</strong> growing American identity</li>
+        <li><strong>Trend:</strong> American identity grows</li>
         <li><strong>Tension:</strong> liberty vs stability (Articles → Constitution)</li>
-        <li><strong>Turning point:</strong> independence + creation of new government</li>
+        <li><strong>Turning point:</strong> independence + new government</li>
       </ol>
     </div>
   </div>
-
   <div class="grid">
     <div class="card">
       <h3>Key Vocabulary (Plain English)</h3>
       <ul>
-        <li><strong>Republicanism:</strong> citizens must be virtuous; government serves public good</li>
-        <li><strong>Federalism:</strong> power shared between national and state governments</li>
-        <li><strong>Popular sovereignty:</strong> government power comes from the people</li>
+        <li><strong>Republicanism:</strong> virtue + public good</li>
+        <li><strong>Federalism:</strong> shared national/state power</li>
+        <li><strong>Popular sovereignty:</strong> power comes from the people</li>
       </ul>
     </div>
     <div class="card">
       <h3>Common Misconceptions</h3>
       <ul>
-        <li>Myth: “The Constitution was a perfect fix.” Reality: it was a compromise with major conflicts unresolved.</li>
-        <li>Myth: “All colonists wanted independence.” Reality: loyalists existed and were significant.</li>
+        <li>Myth: “Everyone wanted independence.” Reality: loyalists existed and mattered.</li>
+        <li>Myth: “Constitution solved everything.” Reality: major issues remained.</li>
       </ul>
     </div>
   </div>
-
-  <h3>DBQ/LEQ Skills for This Period</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Possible DBQ Prompt</h4>
-      <p>Evaluate the extent to which the American Revolution was revolutionary in changing American society.</p>
-      <h4>Thesis Starter</h4>
-      <p class="kbd">The Revolution was (more/less) revolutionary because ___ and ___; however, ___ remained largely unchanged.</p>
-    </div>
-    <div class="card">
-      <h4>Possible LEQ Prompt</h4>
-      <p>Compare the strengths and weaknesses of the Articles of Confederation with the Constitution.</p>
-      <h4>Evidence Bank</h4>
-      <ul>
-        <li>Shays’ Rebellion, taxation limits, commerce, executive power</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="practice">
-    <strong>Practice Question:</strong><br />
-    How did Enlightenment ideas influence the Declaration of Independence?
-    <div class="answer">
-      <strong>Answer Explanation:</strong> Enlightenment thinkers (especially John Locke) promoted natural rights and the social contract, supporting the idea that people can replace governments that violate their rights.
-    </div>
-  </div>
+  <div class="quizShell" data-period="period3"></div>
 </section>
 
 <section id="period4">
   <h2>Period 4: 1800–1848</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Key Ideas</h3>
       <ul>
-        <li>Democracy expanded for white men (Jacksonian era)</li>
-        <li>Market Revolution reshaped work, transportation, and life</li>
-        <li>Reform movements tried to fix social problems</li>
+        <li>Democracy expanded for white men</li>
+        <li>Market Revolution transformed work and transportation</li>
+        <li>Reform movements grew from religious and social change</li>
       </ul>
     </div>
     <div class="card">
       <h3>Remember 3 Things</h3>
       <ol>
-        <li><strong>Trend:</strong> more participation in politics (for some)</li>
-        <li><strong>Tension:</strong> democracy vs inequality</li>
-        <li><strong>Turning point:</strong> transportation/industry change daily life</li>
+        <li><strong>Trend:</strong> mass politics + parties</li>
+        <li><strong>Tension:</strong> democracy vs exclusion</li>
+        <li><strong>Turning point:</strong> Market Revolution links regions</li>
       </ol>
     </div>
   </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Key Vocabulary (Plain English)</h3>
-      <ul>
-        <li><strong>Market Revolution:</strong> shift to a national market economy</li>
-        <li><strong>Second Great Awakening:</strong> religious revival that fueled reform</li>
-        <li><strong>Nullification:</strong> idea that states can ignore federal laws</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Common Misconceptions</h3>
-      <ul>
-        <li>Myth: “Jackson supported all democracy.” Reality: expanded white male voting but supported Indian Removal.</li>
-        <li>Myth: “Reform = abolition only.” Reality: temperance, education, prisons, women’s rights too.</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3>DBQ/LEQ Skills for This Period</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Possible DBQ Prompt</h4>
-      <p>Analyze the ways the Market Revolution changed American society from 1800 to 1848.</p>
-      <h4>Thesis Starter</h4>
-      <p class="kbd">The Market Revolution changed American society by ___ and ___, which resulted in ___.</p>
-    </div>
-    <div class="card">
-      <h4>Possible LEQ Prompt</h4>
-      <p>Evaluate the extent to which political democracy expanded in the United States during the first half of the 19th century.</p>
-      <h4>Evidence Bank</h4>
-      <ul>
-        <li>property requirements removed, party politics, Indian Removal, enslaved people excluded</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="practice">
-    <strong>Practice MC:</strong><br />
-    Which development best illustrates the Market Revolution?
-    <ol type="A">
-      <li>Decline of cotton cultivation</li>
-      <li>Growth of canals and railroads linking regions</li>
-      <li>End of wage labor in northern cities</li>
-      <li>Decreased immigration to the U.S.</li>
-    </ol>
-    <div class="answer">
-      <strong>Correct Answer: B</strong><br />
-      <p>Transportation improvements connected regional economies and boosted national trade.</p>
-    </div>
-  </div>
+  <div class="quizShell" data-period="period4"></div>
 </section>
 
 <section id="period5">
   <h2>Period 5: 1844–1877</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Key Ideas</h3>
@@ -535,142 +414,47 @@
     <div class="card">
       <h3>Remember 3 Things</h3>
       <ol>
-        <li><strong>Trend:</strong> westward expansion increases conflict</li>
+        <li><strong>Trend:</strong> westward growth increases tension</li>
         <li><strong>Tension:</strong> free labor vs slavery</li>
-        <li><strong>Turning point:</strong> Civil War + Reconstruction Amendments</li>
+        <li><strong>Turning point:</strong> 13th/14th/15th Amendments</li>
       </ol>
     </div>
   </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Key Vocabulary (Plain English)</h3>
-      <ul>
-        <li><strong>Manifest Destiny:</strong> belief U.S. should expand west</li>
-        <li><strong>Emancipation:</strong> freeing enslaved people</li>
-        <li><strong>13th/14th/15th:</strong> ended slavery, citizenship/equal protection, voting rights for Black men</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Common Misconceptions</h3>
-      <ul>
-        <li>Myth: “Civil War was only about states’ rights.” Reality: states’ rights mostly about protecting slavery.</li>
-        <li>Myth: “Reconstruction failed completely.” Reality: major constitutional changes occurred, but enforcement collapsed.</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3>DBQ/LEQ Skills for This Period</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Possible DBQ Prompt</h4>
-      <p>Evaluate the extent to which Reconstruction improved the lives of formerly enslaved people.</p>
-      <h4>Thesis Starter</h4>
-      <p class="kbd">Reconstruction improved lives to a (limited/great) extent by ___ and ___; however, ___ restricted progress.</p>
-    </div>
-    <div class="card">
-      <h4>Possible LEQ Prompt</h4>
-      <p>Analyze the causes of the Civil War.</p>
-      <h4>Evidence Bank</h4>
-      <ul>
-        <li>Missouri Compromise, Compromise of 1850, Kansas-Nebraska, Dred Scott, election of 1860</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="practice">
-    <strong>Practice (Short Answer):</strong>
-    <p>Give one reason the Compromise of 1850 increased sectional tensions.</p>
-    <div class="answer">
-      <strong>Answer Explanation:</strong> The Fugitive Slave Act required Northerners to assist in returning escaped enslaved people, sparking resistance and increasing moral/political conflict over slavery.
-    </div>
-  </div>
+  <div class="quizShell" data-period="period5"></div>
 </section>
 
 <section id="period6">
   <h2>Period 6: 1865–1898</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Key Ideas</h3>
       <ul>
-        <li>Industrialization created big business and new wealth</li>
-        <li>Labor conflict grew (strikes, unions)</li>
-        <li>Government struggled to regulate capitalism and inequality</li>
+        <li>Industrialization + big business grew rapidly</li>
+        <li>Labor conflicts increased</li>
+        <li>Calls for regulation and reform expanded</li>
       </ul>
     </div>
     <div class="card">
       <h3>Remember 3 Things</h3>
       <ol>
-        <li><strong>Trend:</strong> growth of national corporations</li>
+        <li><strong>Trend:</strong> national corporations</li>
         <li><strong>Tension:</strong> workers vs owners</li>
-        <li><strong>Turning point:</strong> rise of organized labor + calls for reform</li>
+        <li><strong>Turning point:</strong> strikes + Populist/early reform pressure</li>
       </ol>
     </div>
   </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Key Vocabulary (Plain English)</h3>
-      <ul>
-        <li><strong>Trust:</strong> giant company controlling an industry</li>
-        <li><strong>Laissez-faire:</strong> government stays out of economy</li>
-        <li><strong>Gilded Age:</strong> flashy wealth covering deep problems</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Common Misconceptions</h3>
-      <ul>
-        <li>Myth: “All industrialists were villains.” Reality: debate (philanthropy vs exploitation).</li>
-        <li>Myth: “Government did nothing.” Reality: often sided with business, but regulation began slowly.</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3>DBQ/LEQ Skills for This Period</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Possible DBQ Prompt</h4>
-      <p>Analyze the causes of labor unrest in the United States from 1865 to 1898.</p>
-      <h4>Thesis Starter</h4>
-      <p class="kbd">Labor unrest increased because ___ and ___, prompting ___.</p>
-    </div>
-    <div class="card">
-      <h4>Possible LEQ Prompt</h4>
-      <p>Evaluate the extent to which industrialization transformed American society in the late 19th century.</p>
-      <h4>Evidence Bank</h4>
-      <ul>
-        <li>immigration, urbanization, unions, strikes, monopoly power</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="practice">
-    <strong>Practice MC:</strong><br />
-    Which development best demonstrates the rise of big business in the late 1800s?
-    <ol type="A">
-      <li>Decline in railroad construction</li>
-      <li>Growth of national corporations and trusts</li>
-      <li>End of immigration from Europe</li>
-      <li>Decreased urban populations</li>
-    </ol>
-    <div class="answer">
-      <strong>Correct Answer: B</strong>
-      <p>Large corporations and trusts dominated key industries and influenced politics and labor.</p>
-    </div>
-  </div>
+  <div class="quizShell" data-period="period6"></div>
 </section>
 
 <section id="period7">
   <h2>Period 7: 1890–1945</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Key Ideas</h3>
       <ul>
-        <li>Progressives expanded government to address social/economic problems</li>
-        <li>U.S. became more involved globally (imperialism, WWI, WWII)</li>
-        <li>Great Depression led to the New Deal and bigger federal role</li>
+        <li>Progressive reforms expanded government action</li>
+        <li>World wars increased federal power</li>
+        <li>Great Depression led to New Deal transformation</li>
       </ul>
     </div>
     <div class="card">
@@ -678,198 +462,430 @@
       <ol>
         <li><strong>Trend:</strong> federal power expands</li>
         <li><strong>Tension:</strong> reform vs free-market values</li>
-        <li><strong>Turning point:</strong> Great Depression + WWII mobilization</li>
+        <li><strong>Turning point:</strong> 1929 crash → New Deal</li>
       </ol>
     </div>
   </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Key Vocabulary (Plain English)</h3>
-      <ul>
-        <li><strong>Progressivism:</strong> reform movement to fix problems of industrial society</li>
-        <li><strong>New Deal:</strong> FDR programs to relieve, recover, reform</li>
-        <li><strong>Isolationism:</strong> avoiding foreign alliances/war</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Common Misconceptions</h3>
-      <ul>
-        <li>Myth: “New Deal ended the Depression.” Reality: it helped, but WWII mobilization finished the job.</li>
-        <li>Myth: “Progressives all agreed.” Reality: some reforms excluded marginalized groups.</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3>DBQ/LEQ Skills for This Period</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Possible DBQ Prompt</h4>
-      <p>Evaluate the extent to which the New Deal changed the role of the federal government.</p>
-      <h4>Thesis Starter</h4>
-      <p class="kbd">The New Deal changed the role of the federal government by ___ and ___, though ___ limited change.</p>
-    </div>
-    <div class="card">
-      <h4>Possible LEQ Prompt</h4>
-      <p>Analyze the causes of U.S. entry into World War II.</p>
-      <h4>Evidence Bank</h4>
-      <ul>
-        <li>Pearl Harbor, Lend-Lease, neutrality acts, Axis aggression</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="practice">
-    <strong>Practice (Short Answer):</strong>
-    <p>Give one way the New Deal expanded federal power.</p>
-    <div class="answer">
-      <strong>Answer Explanation:</strong> Programs like Social Security and labor protections increased the federal role in citizens’ economic security and workplace rules.</n    </div>
-  </div>
+  <div class="quizShell" data-period="period7"></div>
 </section>
 
 <section id="period8">
   <h2>Period 8: 1945–1980</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Key Ideas</h3>
       <ul>
-        <li>Cold War shaped foreign and domestic policy</li>
-        <li>Civil Rights Movement challenged segregation and inequality</li>
-        <li>Social movements and culture changed rapidly (women, youth, etc.)</li>
+        <li>Cold War shaped foreign & domestic policy</li>
+        <li>Civil Rights Movement challenged segregation</li>
+        <li>Social movements changed culture and politics</li>
       </ul>
     </div>
     <div class="card">
       <h3>Remember 3 Things</h3>
       <ol>
-        <li><strong>Trend:</strong> containment abroad, anti-communism at home</li>
+        <li><strong>Trend:</strong> containment + proxy conflicts</li>
         <li><strong>Tension:</strong> equality movements vs backlash</li>
-        <li><strong>Turning point:</strong> Civil Rights legislation + Vietnam/Watergate trust crisis</li>
+        <li><strong>Turning point:</strong> Civil Rights Acts + Vietnam/Watergate</li>
       </ol>
     </div>
   </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Key Vocabulary (Plain English)</h3>
-      <ul>
-        <li><strong>Containment:</strong> stopping communism from spreading</li>
-        <li><strong>McCarthyism:</strong> fear-driven accusations of communism</li>
-        <li><strong>Second-wave feminism:</strong> women’s rights movement beyond voting (workplace, rights, equality)</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Common Misconceptions</h3>
-      <ul>
-        <li>Myth: “Civil Rights ended in 1964/65.” Reality: continued struggles (housing, policing, economic inequality).</li>
-        <li>Myth: “Cold War was only about war.” Reality: diplomacy, economics, propaganda, and proxy wars.</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3>DBQ/LEQ Skills for This Period</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Possible DBQ Prompt</h4>
-      <p>Analyze the extent to which the Civil Rights Movement changed American society from 1945 to 1980.</p>
-      <h4>Thesis Starter</h4>
-      <p class="kbd">The Civil Rights Movement changed society by ___ and ___, while ___ shows limits/continuity.</p>
-    </div>
-    <div class="card">
-      <h4>Possible LEQ Prompt</h4>
-      <p>Evaluate the causes of growing distrust in government in the 1960s and 1970s.</p>
-      <h4>Evidence Bank</h4>
-      <ul>
-        <li>Vietnam, Watergate, Great Society, protest movements</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="practice">
-    <strong>Practice MC:</strong><br />
-    Which action best reflects the strategy of “containment” during the Cold War?
-    <ol type="A">
-      <li>Reducing U.S. military spending</li>
-      <li>Providing aid to nations resisting communism</li>
-      <li>Ending all alliances</li>
-      <li>Supporting isolationism</li>
-    </ol>
-    <div class="answer">
-      <strong>Correct Answer: B</strong>
-      <p>Containment aimed to block communist expansion through aid, alliances, and sometimes military involvement.</p>
-    </div>
-  </div>
+  <div class="quizShell" data-period="period8"></div>
 </section>
 
 <section id="period9">
   <h2>Period 9: 1980–Present</h2>
-
   <div class="grid">
     <div class="card">
       <h3>Key Ideas</h3>
       <ul>
-        <li>Conservative resurgence reshaped politics and policy debates</li>
+        <li>Conservative resurgence reshaped debates over government</li>
         <li>Globalization transformed economy and culture</li>
-        <li>Ongoing debates over government’s role, rights, and national identity</li>
+        <li>Politics became more polarized</li>
       </ul>
     </div>
     <div class="card">
       <h3>Remember 3 Things</h3>
       <ol>
-        <li><strong>Trend:</strong> shift toward conservative policies + market solutions</li>
+        <li><strong>Trend:</strong> market-focused policies + deregulation arguments</li>
         <li><strong>Tension:</strong> globalization winners vs losers</li>
-        <li><strong>Turning point:</strong> end of Cold War + new global conflicts and economic change</li>
+        <li><strong>Turning point:</strong> Cold War ends → new global challenges</li>
       </ol>
     </div>
   </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Key Vocabulary (Plain English)</h3>
-      <ul>
-        <li><strong>Neoliberalism:</strong> policies favoring free markets, deregulation, privatization</li>
-        <li><strong>Globalization:</strong> increasing worldwide economic and cultural connection</li>
-        <li><strong>Polarization:</strong> political parties moving farther apart</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3>Common Misconceptions</h3>
-      <ul>
-        <li>Myth: “Period 9 is all current events.” Reality: focus on trends, not headlines.</li>
-        <li>Myth: “One president caused everything.” Reality: long-term economic and cultural forces matter.</li>
-      </ul>
-    </div>
-  </div>
-
-  <h3>DBQ/LEQ Skills for This Period</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Possible DBQ Prompt</h4>
-      <p>Evaluate the extent to which globalization reshaped the United States from 1980 to the present.</p>
-      <h4>Thesis Starter</h4>
-      <p class="kbd">Globalization reshaped the U.S. by ___ and ___, though ___ shows limits/continuity.</p>
-    </div>
-    <div class="card">
-      <h4>Possible LEQ Prompt</h4>
-      <p>Analyze the causes of increasing political polarization in the late 20th and early 21st centuries.</p>
-      <h4>Evidence Bank</h4>
-      <ul>
-        <li>media changes, party realignment, economic inequality, cultural debates</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="practice">
-    <strong>Practice (Short Answer):</strong>
-    <p>Give one example of how globalization changed the U.S. economy after 1980.</p>
-    <div class="answer">
-      <strong>Answer Explanation:</strong> Manufacturing jobs declined in some regions as companies moved production overseas, while growth increased in finance, technology, and services — changing where jobs were and who benefited.</n    </div>
-  </div>
+  <div class="quizShell" data-period="period9"></div>
 </section>
 
 <footer>
   <p>APUSH Ultimate Review • Built for Growth • You can earn a 4 or 5</p>
 </footer>
+
+<script>
+  /* =====================
+     Interactive Practice Engine (Khan-style: click, instant feedback)
+     Each period has 20 questions (minimum). You can switch to Random 10.
+  ====================== */
+
+  const QUESTION_BANK = {
+    period1: [
+      {q:"Which factor most influenced differences among Native American societies before 1492?", c:["A shared written language","Geography and climate","European trade networks","Common political system"], a:1, e:"Environment shaped food sources, housing, and social organization (e.g., Great Plains vs Southwest)."},
+      {q:"The Columbian Exchange most directly caused which change in the Americas?", c:["End of all Indigenous agriculture","Major population decline from disease","Immediate independence of colonies","Abolition of slavery"], a:1, e:"Old World diseases (smallpox, measles) devastated Indigenous populations."},
+      {q:"Which best describes Spanish motives in much of the early Americas?", c:["Religious isolation","Extraction of wealth and conversion","Avoiding conflict with Indigenous peoples","Creating democratic republics"], a:1, e:"Spain pursued gold/silver extraction and Catholic conversion through conquest and missions."},
+      {q:"Which crop’s spread from the Americas to Europe had major demographic effects?", c:["Potato","Wheat","Rice","Coffee"], a:0, e:"New World crops like potatoes increased calories and supported population growth in Europe."},
+      {q:"The encomienda system is best described as…", c:["A democratic voting system","Forced labor system exploiting Indigenous people","A trade alliance among European powers","A tax policy limiting colonial trade"], a:1, e:"Encomienda granted Spaniards the right to demand labor/tribute from Indigenous communities."},
+      {q:"Which group most benefited economically from Atlantic exploration in the 1500s?", c:["European merchants and monarchies","Indigenous farmers","African coastal kingdoms only","Asian empires"], a:0, e:"European states and merchants gained wealth through trade and colonization."},
+      {q:"In the Americas, horses introduced by Europeans most directly affected…", c:["Great Plains hunting and warfare","Aztec writing systems","Inca road construction","Caribbean sugar refining"], a:0, e:"Horses transformed mobility, hunting, and conflict for many Great Plains groups."},
+      {q:"Which is the best example of environment shaping culture?", c:["Northwest Coast fishing societies","All tribes using the same crops","All societies practicing nomadic herding","All societies building stone cities"], a:0, e:"Coastal resources supported settled fishing and trade networks in the Northwest."},
+      {q:"A major immediate consequence of European contact was…", c:["Rapid industrialization","Biological exchange of diseases and foods","The end of Christianity in Europe","The creation of the U.S. Constitution"], a:1, e:"The Columbian Exchange created major biological change."},
+      {q:"Which statement best fits many Indigenous political structures before contact?", c:["All centralized empires","Varied from confederacies to city-states","No political organization","Only monarchies"], a:1, e:"Political systems ranged widely (Iroquois Confederacy vs smaller bands)."},
+      {q:"Spain’s use of missions in North America primarily aimed to…", c:["End all trade","Convert and control Indigenous populations","Create representative assemblies","Encourage English settlement"], a:1, e:"Missions spread Catholicism and extended Spanish influence."},
+      {q:"Which was a major cause of Indigenous resistance to European colonization?", c:["Desire to pay more taxes","Loss of land and autonomy","Support for mercantilism","Fear of railroads"], a:1, e:"Colonization threatened sovereignty, land, and traditional lifeways."},
+      {q:"Which best explains why disease spread so rapidly after 1492?", c:["Indigenous immunity was stronger","Populations lacked immunity to Old World diseases","Europeans avoided cities","Medical science prevented outbreaks"], a:1, e:"Isolation from Afro-Eurasian diseases meant little prior exposure and immunity."},
+      {q:"Which group created one of the largest pre-contact empires in the Americas?", c:["Inca","Dutch","French","Portuguese"], a:0, e:"The Inca Empire controlled large territory in the Andes."},
+      {q:"A key feature of many Mesoamerican societies before 1492 was…", c:["Nomadic buffalo hunting","Large cities and complex agriculture","Industrial factories","Parliamentary democracy"], a:1, e:"Mesoamerica had urban centers and intensive agriculture."},
+      {q:"Which best describes the role of trade among Indigenous groups before Europeans?", c:["Rare and local only","Widespread networks exchanging goods","Banned by religion","Only across the Atlantic"], a:1, e:"Trade networks connected regions, moving items like shells, copper, and maize."},
+      {q:"Which concept links environment → culture most clearly?", c:["Mercantilism","Adaptive strategies","Checks and balances","Laissez-faire"], a:1, e:"Groups adapted to local conditions (climate/resources) to survive and thrive."},
+      {q:"The primary reason Spanish conquistadors succeeded quickly was…", c:["Only better weapons","All Indigenous people welcomed them","Allies, disease, and internal conflicts","Spanish population was larger"], a:2, e:"Alliances with rivals, disease, and political divisions weakened empires."},
+      {q:"The Columbian Exchange created which global pattern?", c:["Less global trade","More global interdependence","End of migration","End of slavery"], a:1, e:"It connected continents through goods, people, and ideas (often violently)."},
+      {q:"Which best explains why the Aztec and Inca were vulnerable to conquest?", c:["No agriculture","Recent expansion created resentful subjects","No trade networks","Lack of religion"], a:1, e:"Conquered peoples sometimes supported Spaniards against imperial rulers."}
+    ],
+
+    period2: [
+      {q:"Which region relied most on shipbuilding, trade, and small farms?", c:["New England","Chesapeake","Lower South","Spanish borderlands"], a:0, e:"New England’s economy centered on commerce, fishing, and small-scale farming."},
+      {q:"Indentured servitude declined in the Chesapeake largely because…", c:["Tobacco ended","Life expectancy increased and slavery became cheaper long-term","Parliament banned it","Colonists stopped needing labor"], a:1, e:"As conditions stabilized, enslaved labor became a more permanent workforce."},
+      {q:"Bacon’s Rebellion contributed to…", c:["Ending colonial assemblies","Increasing reliance on African slavery","Immediate independence","The Great Awakening"], a:1, e:"Elites shifted toward racial slavery to reduce tensions with poor white laborers."},
+      {q:"Mercantilism encouraged colonies to…", c:["Trade freely with any nation","Provide raw materials to the mother country","Ban exports","Create independent currencies"], a:1, e:"Colonies existed to benefit the home country through controlled trade."},
+      {q:"Salutary neglect most directly led to…", c:["Stronger royal control","Colonial self-government traditions","Immediate abolition of slavery","End of Atlantic trade"], a:1, e:"Loose enforcement let colonial assemblies and autonomy grow."},
+      {q:"The Middle Colonies were known for…", c:["Rice plantations","Religious uniformity","Diverse population and grain production","No slavery"], a:2, e:"Often called the “breadbasket,” with pluralism (e.g., Pennsylvania)."},
+      {q:"Which best describes the Great Awakening?", c:["A political rebellion","A religious revival emphasizing emotional preaching","A trade policy","A war against France"], a:1, e:"It challenged traditional authority and encouraged new denominations."},
+      {q:"Which crop drove the Chesapeake economy?", c:["Cotton","Tobacco","Wheat","Sugar"], a:1, e:"Tobacco farming dominated Virginia/Maryland and required heavy labor."},
+      {q:"New England town meetings best illustrate…", c:["Direct citizen participation","Royal dictatorship","Military rule","Isolationism"], a:0, e:"Town meetings are a form of local direct democracy."},
+      {q:"Slavery expanded fastest where…", c:["Small farms dominated","Plantations grew labor-intensive cash crops","Industry replaced agriculture","There were no ports"], a:1, e:"Plantation systems required large labor forces for profit."},
+      {q:"The Navigation Acts were intended to…", c:["Increase colonial independence","Control colonial trade for Britain’s benefit","Abolish taxes","Encourage French settlement"], a:1, e:"They limited trade routes and required use of British ships/ports."},
+      {q:"Which colony was founded as a “holy experiment” promoting religious toleration?", c:["Virginia","Massachusetts","Pennsylvania","South Carolina"], a:2, e:"William Penn’s Pennsylvania emphasized toleration (especially for Quakers)."},
+      {q:"Which conflict shows early struggle for control in the Northeast?", c:["King Philip’s War","Spanish-American War","War of 1812","Mexican-American War"], a:0, e:"King Philip’s War (1675–76) was a major conflict between colonists and Native groups."},
+      {q:"Which best describes colonial labor systems over time?", c:["Slavery decreased everywhere","Shift from indentured servitude to racialized slavery in many areas","Indentured servitude replaced slavery","Labor was unnecessary"], a:1, e:"Economic incentives and racial hierarchy increased chattel slavery."},
+      {q:"The primary goal of the Virginia Company in Jamestown was…", c:["Religious freedom","Profit","Abolition","Education reform"], a:1, e:"Jamestown began as a joint-stock, profit-seeking venture."},
+      {q:"Which best explains why New England had fewer large plantations?", c:["No access to water","Soil/climate favored smaller farms","No immigrants","Britain banned cash crops"], a:1, e:"Climate and soil made plantation agriculture less profitable than in the South."},
+      {q:"The House of Burgesses is significant because it…", c:["Ended slavery","Was an early elected colonial assembly","Founded a university","Declared independence"], a:1, e:"It established representative government in Virginia (1619)."},
+      {q:"The Great Awakening had which political/social impact?", c:["Strengthened deference to elites","Encouraged questioning of authority","Ended colonial diversity","Eliminated religious groups"], a:1, e:"It promoted individual judgment and challenged established churches."},
+      {q:"Which best describes the transatlantic slave trade?", c:["Voluntary migration","Forced migration connecting Africa to the Americas","A religious pilgrimage","Mostly European movement"], a:1, e:"Millions were forcibly transported to supply labor to colonies."},
+      {q:"Which colonial region most relied on enslaved labor for rice/indigo?", c:["New England","Middle Colonies","Lower South","Backcountry"], a:2, e:"The Lower South (Carolinas/Georgia) used enslaved labor heavily on plantations."}
+    ],
+
+    period3: [
+      {q:"The French and Indian War led Britain to…", c:["Lower taxes","Increase colonial taxes/enforcement","Leave North America","Give colonies seats in Parliament"], a:1, e:"Britain sought revenue and tighter control to pay war debts."},
+      {q:"“No taxation without representation” reflects…", c:["Desire to end all government","Belief Parliament couldn’t tax colonists without representation","Support for monarchy","Support for mercantilism"], a:1, e:"Colonists argued taxation required representation in the lawmaking body."},
+      {q:"Which act was a direct tax on printed materials?", c:["Stamp Act","Tea Act","Sugar Act","Townshend Duties"], a:0, e:"The Stamp Act taxed legal documents, newspapers, and more."},
+      {q:"The Boston Tea Party protested…", c:["Tea quality","Taxation and monopoly power","French invasion","Slavery"], a:1, e:"Colonists opposed the Tea Act’s perceived unfair taxation and monopoly."},
+      {q:"Which Enlightenment idea appears in the Declaration?", c:["Divine right","Natural rights","Mercantilism","Feudalism"], a:1, e:"Locke’s natural rights and social contract shaped the argument."},
+      {q:"The Articles of Confederation were weak mainly because…", c:["Too strong president","No power to tax or regulate trade effectively","Too many soldiers","Too many courts"], a:1, e:"The national government lacked revenue and enforcement power."},
+      {q:"Shays’ Rebellion increased support for…", c:["Stronger national government","Return to British rule","Abolition of states","More taxes"], a:0, e:"It highlighted instability and the weakness of the Articles."},
+      {q:"The Great Compromise created…", c:["One-house legislature","Two-house legislature with different representation rules","A monarchy","A national church"], a:1, e:"House by population, Senate equal for states."},
+      {q:"Federalists supported the Constitution because it…", c:["Reduced national power","Created stronger central authority","Ended elections","Eliminated courts"], a:1, e:"Federalists wanted a more effective national government."},
+      {q:"The Bill of Rights was added to…", c:["End slavery","Protect civil liberties and win Anti-Federalist support","Create a king","Ban political parties"], a:1, e:"It addressed fears of federal overreach by listing protections."},
+      {q:"Which event helped spark the Revolution by turning opinion against Britain?", c:["Louisiana Purchase","Boston Massacre","Watergate","Gettysburg"], a:1, e:"The Boston Massacre became a propaganda symbol of British oppression."},
+      {q:"Which group tended to remain loyal to Britain?", c:["All farmers","Some merchants and officials tied to Britain","All enslaved people","All Native Americans"], a:1, e:"Loyalists often had economic/political ties to the empire."},
+      {q:"The Treaty of Paris (1783) did what?", c:["Ended Civil War","Ended Revolution and recognized U.S. independence","Started WWI","Created Constitution"], a:1, e:"It recognized independence and set boundaries."},
+      {q:"“Republican motherhood” encouraged women to…", c:["Vote in all elections","Educate children in civic virtue","Join the army","Lead Congress"], a:1, e:"It emphasized women’s role in shaping virtuous citizens."},
+      {q:"The Whiskey Rebellion tested…", c:["State nullification","Federal government’s ability to enforce laws","Women’s suffrage","Segregation"], a:1, e:"Washington’s response showed the new government could enforce laws."},
+      {q:"Which principle divides power among branches?", c:["Popular sovereignty","Separation of powers","Mercantilism","Social Darwinism"], a:1, e:"Executive, legislative, judicial branches check each other."},
+      {q:"The Constitution’s checks and balances primarily aimed to…", c:["Create one strong ruler","Prevent tyranny by limiting power","Eliminate elections","End federalism"], a:1, e:"It limits any one branch from dominating."},
+      {q:"Which was a major continuity after independence?", c:["No social hierarchy","Slavery continued in many places","Women gained full equality","No property rights"], a:1, e:"Revolutionary ideals existed, but many inequalities persisted."},
+      {q:"Which best describes the Revolution’s impact on slavery?", c:["Immediate abolition nationwide","Some northern gradual emancipation; slavery expands in South","No debates occurred","Slavery ended in Caribbean"], a:1, e:"Northern states began gradual emancipation; southern slavery persisted and grew."},
+      {q:"The main reason for writing the Constitution was…", c:["To weaken the national government","To fix weaknesses of the Articles","To end immigration","To create a national church"], a:1, e:"The Articles couldn’t manage trade, taxes, or internal stability."}
+    ],
+
+    period4: [
+      {q:"Jacksonian democracy is most associated with…", c:["Expanding voting rights for white men","Ending political parties","Abolishing the presidency","Immediate women’s suffrage"], a:0, e:"Many states removed property requirements, expanding white male participation."},
+      {q:"The Market Revolution was driven by…", c:["Railroads/canals and industrialization","Abolition of banks","End of immigration","Decline in trade"], a:0, e:"Transportation and new production methods linked regions and expanded markets."},
+      {q:"The Second Great Awakening contributed to…", c:["Less reform","Reform movements like abolition and temperance","End of religion","Monarchy"], a:1, e:"Religious revival emphasized moral improvement and social reform."},
+      {q:"The main purpose of the Erie Canal was to…", c:["Connect the Midwest to Atlantic markets","Stop slavery","Create a new constitution","Expand the navy"], a:0, e:"It lowered transport costs and boosted trade/settlement."},
+      {q:"The American System emphasized…", c:["Free trade only","Tariffs, internal improvements, and a national bank","Isolationism","Ending factories"], a:1, e:"Henry Clay’s plan aimed to strengthen the national economy."},
+      {q:"The Nullification Crisis involved…", c:["States challenging a federal tariff","Women’s rights","War with Mexico","Gold rush"], a:0, e:"South Carolina claimed the right to nullify federal tariffs."},
+      {q:"Indian Removal is most associated with…", c:["Jefferson","Andrew Jackson","Lincoln","FDR"], a:1, e:"Jackson supported removal, leading to the Trail of Tears."},
+      {q:"A major effect of the Market Revolution was…", c:["Less regional specialization","Increased wage labor in factories","End of cities","End of immigration"], a:1, e:"Factory systems expanded wage labor and urban growth."},
+      {q:"The Seneca Falls Convention focused on…", c:["Banking reform","Women’s rights","Foreign policy","Prohibition"], a:1, e:"It issued the Declaration of Sentiments advocating women’s equality."},
+      {q:"Which best describes the Whig Party?", c:["Strong executive, limited Congress","Strong Congress, economic development","Abolition of tariffs","No internal improvements"], a:1, e:"Whigs favored Congress-centered power and modernization (roads, banks)."},
+      {q:"The main idea of “manifest destiny” in this era was…", c:["Stay on the East Coast","Expand U.S. territory across the continent","End all immigration","Join the British Empire"], a:1, e:"Many believed expansion was a national mission."},
+      {q:"The “cult of domesticity” refers to…", c:["Women’s equality in politics","Ideal of women’s role in home and morality","Military training","Factory management"], a:1, e:"It emphasized separate spheres and women’s domestic influence."},
+      {q:"Which reform movement targeted alcohol?", c:["Temperance","Abolition","Nativism","Transcendentalism"], a:0, e:"Temperance sought to reduce alcohol consumption to address social problems."},
+      {q:"Transcendentalists like Emerson emphasized…", c:["Obedience to tradition","Individualism and self-reliance","Support for monarchy","Mercantilism"], a:1, e:"They valued intuition, nature, and individual conscience."},
+      {q:"A major political change in this era was…", c:["Fewer voters","Rise of mass party politics and campaigning","End of elections","End of newspapers"], a:1, e:"Campaigns and parties mobilized large numbers of voters."},
+      {q:"Which invention/innovation helped spread information quickly?", c:["Telegraph","Cotton gin","Spinning jenny","Steamship only"], a:0, e:"The telegraph enabled rapid long-distance communication."},
+      {q:"The main economic effect of industrialization in the North was…", c:["More subsistence farming","Growth of factories and wage labor","End of cities","Less trade"], a:1, e:"Factories increased production and urban working-class growth."},
+      {q:"The Trail of Tears resulted from…", c:["Homestead Act","Indian Removal policies","Compromise of 1850","New Deal"], a:1, e:"Removal forced many Cherokee west; thousands died."},
+      {q:"Which best explains reform growth?", c:["No social problems existed","Religious revival + market changes created new social issues","Britain required it","The Constitution banned reform"], a:1, e:"Rapid change produced inequality and moral movements."},
+      {q:"A key tension of Period 4 is…", c:["Democracy expanding for some while others remained excluded","End of political conflict","No immigration","No economic growth"], a:0, e:"Voting expanded mainly for white men, not for women or enslaved people."}
+    ],
+
+    period5: [
+      {q:"Which event intensified conflict over slavery in new territories?", c:["Kansas-Nebraska Act","Louisiana Purchase","Erie Canal","XYZ Affair"], a:0, e:"Kansas-Nebraska reopened slavery debate using popular sovereignty."},
+      {q:"The Fugitive Slave Act (1850) caused…", c:["Less northern resistance","More sectional tension and northern backlash","Immediate abolition","End of plantations"], a:1, e:"It forced Northerners to assist in capturing runaways, radicalizing opposition."},
+      {q:"Dred Scott v. Sandford held that…", c:["Congress could ban slavery everywhere","Black people were not citizens and Congress couldn’t ban slavery in territories","Slavery was unconstitutional","Segregation was illegal"], a:1, e:"It limited federal power to restrict slavery in territories."},
+      {q:"The main cause of the Civil War was…", c:["Tariffs only","Conflict over slavery’s expansion and its future","Immigration","Banking policy"], a:1, e:"Sectional conflict centered on slavery and political power."},
+      {q:"The Emancipation Proclamation…", c:["Freed all enslaved people immediately","Freed enslaved people in rebellious states and shifted war aims","Ended Reconstruction","Granted voting rights"], a:1, e:"It linked Union victory to emancipation and discouraged foreign support for Confederacy."},
+      {q:"Sherman’s March is best described as…", c:["Diplomatic compromise","Total war strategy targeting infrastructure and morale","A naval battle","A treaty"], a:1, e:"It aimed to weaken Confederate capacity and will to fight."},
+      {q:"The 13th Amendment…", c:["Granted women’s suffrage","Abolished slavery","Created income tax","Ended child labor"], a:1, e:"It ended slavery nationwide."},
+      {q:"The main purpose of the 14th Amendment was…", c:["Lower tariffs","Define citizenship and guarantee equal protection","Create new states","End the Senate"], a:1, e:"It established birthright citizenship and equal protection."},
+      {q:"During Reconstruction, “Black Codes” were…", c:["Civil rights protections","Laws restricting freedom of formerly enslaved people","Military codes","New Deal laws"], a:1, e:"They attempted to control labor and limit rights."},
+      {q:"Radical Republicans generally wanted…", c:["Quick reunion with little change","Stronger federal protection for freedpeople and harsher terms for ex-Confederates","End amendments","Return to Articles"], a:1, e:"They supported civil rights and federal enforcement."},
+      {q:"The Compromise of 1877 is significant because it…", c:["Ended the Civil War","Ended federal Reconstruction enforcement in the South","Abolished slavery","Created the New Deal"], a:1, e:"It led to removal of troops and the rise of Jim Crow."},
+      {q:"The main political issue in the 1850s was…", c:["Bank interest rates","Slavery in the territories","U.S. entry into NATO","Space exploration"], a:1, e:"Territorial expansion raised the slavery question repeatedly."},
+      {q:"Harriet Beecher Stowe’s Uncle Tom’s Cabin…", c:["Supported slavery","Increased anti-slavery sentiment in the North","Ended Reconstruction","Began the Great Awakening"], a:1, e:"It exposed slavery’s brutality and fueled abolitionist feeling."},
+      {q:"Which was a major Union advantage?", c:["Smaller population","More industrial capacity and railroads","Fewer resources","No navy"], a:1, e:"Industry, railroads, and population gave the Union strategic advantages."},
+      {q:"Sharecropping after the war often…", c:["Made most freedpeople wealthy","Trapped farmers in cycles of debt","Eliminated cotton farming","Ended racism"], a:1, e:"Debt and crop liens limited mobility and maintained economic dependence."},
+      {q:"The purpose of the Freedmen’s Bureau was to…", c:["Expand slavery","Assist formerly enslaved people (education, labor, aid)","Create new tariffs","Recruit soldiers for Spain"], a:1, e:"It provided support and helped negotiate labor/education."},
+      {q:"Lincoln’s election in 1860 led to…", c:["Immediate end of slavery","Southern secession","End of parties","Annexation of Canada"], a:1, e:"Many southern states seceded fearing slavery’s restriction."},
+      {q:"Which best explains Reconstruction’s limits?", c:["No constitutional changes","Violence and political backlash undermined enforcement","No elections","No southern resistance"], a:1, e:"Groups like the KKK and political compromise weakened reforms."},
+      {q:"The 15th Amendment…", c:["Guaranteed voting regardless of race (men)","Guaranteed voting for women","Banned alcohol","Created Social Security"], a:0, e:"It prohibited denying voting rights based on race (though later undermined)."},
+      {q:"A key continuity from before to after the Civil War was…", c:["No racism","Continued racial discrimination despite new amendments","End of agriculture","No regional differences"], a:1, e:"Legal changes were real, but discrimination continued through new systems."}
+    ],
+
+    period6: [
+      {q:"Which innovation most accelerated national markets in the late 1800s?", c:["Railroads","Canals only","Hand tools","Horse travel"], a:0, e:"Railroads integrated markets and moved goods/people quickly."},
+      {q:"Social Darwinism was often used to justify…", c:["Labor unions","Economic inequality as “natural”","Government welfare","Abolition"], a:1, e:"It argued competition and survival of the fittest explained wealth differences."},
+      {q:"A “trust” was…", c:["Small family farm","A business arrangement controlling an industry","A labor union","A court"], a:1, e:"Trusts concentrated power (e.g., Standard Oil)."},
+      {q:"Vertical integration is best described as…", c:["Owning every step of production","Owning competing companies","Union bargaining","Government regulation"], a:0, e:"Carnegie controlled raw materials → production → distribution."},
+      {q:"Horizontal integration is best described as…", c:["Owning railroads only","Buying out competitors","Controlling mines","Reducing production"], a:1, e:"Rockefeller expanded by absorbing rival companies."},
+      {q:"A major cause of labor unrest was…", c:["High wages and short hours","Low wages, long hours, dangerous conditions","Too many benefits","No factories"], a:1, e:"Harsh conditions spurred strikes and unionization."},
+      {q:"The Homestead Strike involved conflict between…", c:["Farmers and bankers","Steel workers and management","Teachers and students","Soldiers and Spain"], a:1, e:"It was a major labor dispute in the steel industry."},
+      {q:"The Populist Party mainly advocated…", c:["Gold standard only","Policies aiding farmers (railroad regulation, currency changes)","Imperialism","Segregation laws"], a:1, e:"Populists pushed reforms to counter corporate power and deflation."},
+      {q:"“Gilded Age” implies…", c:["No problems existed","Surface wealth covering corruption and inequality","Total equality","End of immigration"], a:1, e:"The era had extreme wealth alongside poverty and corruption."},
+      {q:"Settlement houses like Hull House aimed to…", c:["Promote nativism","Provide services to immigrants and the poor","Ban unions","Support segregation"], a:1, e:"They offered education, childcare, and support in urban areas."},
+      {q:"Chinese Exclusion Act (1882) is an example of…", c:["Open borders","Nativism and restrictive immigration policy","Civil rights expansion","Women’s suffrage"], a:1, e:"It restricted immigration based on ethnicity."},
+      {q:"Which best explains urbanization in this period?", c:["Farm prosperity","Factory jobs drew people to cities","End of immigration","No transportation"], a:1, e:"Industrial jobs and immigration fueled city growth."},
+      {q:"A major argument of “Gospel of Wealth” was…", c:["Government should seize all property","Wealthy should use riches for public good","Workers should own factories","Ban philanthropy"], a:1, e:"Carnegie argued the rich had a responsibility to support society."},
+      {q:"The Interstate Commerce Act and Sherman Antitrust Act reflect…", c:["No regulation","Early attempts to regulate business","End of railroads","Abolition"], a:1, e:"They signaled growing concern about monopoly power."},
+      {q:"A key effect of immigration was…", c:["Less cultural diversity","More urban labor supply and ethnic neighborhoods","End of cities","No political machines"], a:1, e:"Immigration provided labor and increased diversity."},
+      {q:"Political machines often…", c:["Provided jobs/services in exchange for votes","Ended corruption","Banned elections","Eliminated immigration"], a:0, e:"They traded patronage for political support (often corruptly)."},
+      {q:"The Pullman Strike showed…", c:["Government always sided with labor","Federal government often intervened against labor","End of unions","No railroads"], a:1, e:"Federal troops/courts were used to break strikes."},
+      {q:"Which is a continuity from Period 5 to Period 6?", c:["End of capitalism","Racial inequality persisted despite legal changes","No migration","No reform movements"], a:1, e:"Legal changes didn’t end discrimination; new systems continued inequality."},
+      {q:"In many cities, tenements were…", c:["Luxury housing","Crowded, poor-quality housing for workers","Plantations","Government buildings"], a:1, e:"They reflected rapid growth and inadequate urban planning."},
+      {q:"A major goal of labor unions was…", c:["Longer hours","Better wages and working conditions","End of voting","More child labor"], a:1, e:"Unions pushed for safer workplaces, pay, and hours."}
+    ],
+
+    period7: [
+      {q:"Progressive reformers generally aimed to…", c:["Weaken government","Use government to address industrial problems","End democracy","Expand imperial monarchy"], a:1, e:"Progressives sought regulation, social reforms, and political change."},
+      {q:"The Square Deal and trust-busting are linked to…", c:["Theodore Roosevelt","Woodrow Wilson","Herbert Hoover","James Madison"], a:0, e:"TR promoted regulation and action against monopolies."},
+      {q:"The main U.S. motive in many imperial actions (1890s) was…", c:["Avoid trade","Expand markets and influence","End navy","Join Europe"], a:1, e:"Economic and strategic goals fueled overseas expansion."},
+      {q:"The Great Migration refers to…", c:["Europeans moving to Asia","African Americans moving from South to North/West","Farmers moving to Canada","Soldiers moving to France"], a:1, e:"It shifted population to northern cities for jobs and safety."},
+      {q:"World War I increased federal power mainly through…", c:["Ending taxation","War mobilization agencies and propaganda","Abolishing the draft","Ending industry"], a:1, e:"Mobilization expanded government role in economy and public opinion."},
+      {q:"The Red Scare after WWI was driven by fear of…", c:["Monarchy","Communism and radicalism","Capitalism","Immigration from Canada"], a:1, e:"The Bolshevik Revolution and strikes fueled anti-radical fear."},
+      {q:"The 1920s are often associated with…", c:["No consumer goods","Mass consumer culture and advertising","End of radios","No migration"], a:1, e:"Cars, radios, and advertising expanded consumer culture."},
+      {q:"The Harlem Renaissance was…", c:["A banking policy","A flourishing of Black arts and culture","A war","A labor strike"], a:1, e:"It showcased literature, music, and art in the 1920s."},
+      {q:"A major cause of the Great Depression was…", c:["Too much regulation","Speculation and economic instability (overproduction/unequal wealth)","End of stock market","High wages"], a:1, e:"Multiple factors included stock market crash and structural weaknesses."},
+      {q:"The New Deal’s purpose is often summarized as…", c:["War, wealth, worship","Relief, recovery, reform","Taxes, tariffs, treaties","Isolation, immigration, industry"], a:1, e:"New Deal programs aimed to help people, stabilize economy, and prevent repeats."},
+      {q:"Social Security is an example of…", c:["Foreign policy","Federal social welfare expansion","Imperialism","A court case"], a:1, e:"It created a national retirement system and safety net."},
+      {q:"Critics of the New Deal argued it…", c:["Did too little","Expanded federal government too much","Ended capitalism","Abolished elections"], a:1, e:"Conservatives feared federal overreach; some left critics wanted more."},
+      {q:"U.S. entry into WWII was most directly triggered by…", c:["Treaty of Versailles","Attack on Pearl Harbor","Boston Tea Party","Korean War"], a:1, e:"Japan’s attack led the U.S. to declare war."},
+      {q:"During WWII, the U.S. government…", c:["Shrank drastically","Expanded production and mobilization (war economy)","Ended industry","Banned women working"], a:1, e:"War production increased jobs, federal planning, and output."},
+      {q:"Japanese American internment is best explained by…", c:["Civil rights expansion","Wartime fear and racism","Economic boom","End of war"], a:1, e:"Executive Order 9066 reflected suspicion and racial prejudice."},
+      {q:"The “Fourteen Points” was associated with…", c:["Wilson’s vision for peace","TR’s New Nationalism","Hoover’s policies","Lincoln’s plans"], a:0, e:"Wilson proposed principles for postwar order and a League of Nations."},
+      {q:"The main goal of the Progressive Era political reforms was to…", c:["Reduce voter participation","Make government more democratic and responsive","End courts","End unions"], a:1, e:"Initiative, referendum, recall, and direct Senate elections increased participation."},
+      {q:"Which is a major continuity from the Progressive Era to the New Deal?", c:["Less government involvement","Greater use of government to solve social/economic problems","End of reform","No regulation"], a:1, e:"Both expanded the idea that government can address market failures."},
+      {q:"The Dust Bowl worsened the Depression by…", c:["Increasing crop yields","Destroying farmland and displacing families","Ending drought","Reducing migration"], a:1, e:"Ecological disaster forced many to move and deepened hardship."},
+      {q:"The GI Bill after WWII primarily…", c:["Ended segregation","Expanded education/homeownership for veterans","Started WWI","Banned unions"], a:1, e:"It helped create a larger middle class via education and housing support."}
+    ],
+
+    period8: [
+      {q:"Containment is best defined as…", c:["Expanding communism","Stopping the spread of communism","Ending alliances","Avoiding diplomacy"], a:1, e:"U.S. policy aimed to prevent communism from spreading to new areas."},
+      {q:"The Truman Doctrine and Marshall Plan were responses to…", c:["Civil War","Cold War tensions and Soviet influence","Great Awakening","Mexican-American War"], a:1, e:"They sought to support nations resisting communism and rebuild Europe."},
+      {q:"NATO is an example of…", c:["Isolationism","A Cold War military alliance","A civil rights law","A labor union"], a:1, e:"It was a collective defense alliance formed in 1949."},
+      {q:"McCarthyism refers to…", c:["Support for unions","Fear-driven anti-communist accusations","New Deal programs","Women’s suffrage"], a:1, e:"It involved accusations often without evidence, chilling dissent."},
+      {q:"Brown v. Board of Education ruled…", c:["Segregation was constitutional","School segregation was unconstitutional","Voting rights were unlimited","Internment was required"], a:1, e:"It overturned Plessy in public education (separate is inherently unequal)."},
+      {q:"The Montgomery Bus Boycott is associated with…", c:["Malcolm X only","Rosa Parks and MLK Jr.","Watergate","NATO"], a:1, e:"It was a major nonviolent protest against segregation."},
+      {q:"The Civil Rights Act of 1964 primarily…", c:["Ended the draft","Banned discrimination in public accommodations/employment","Created Social Security","Banned immigration"], a:1, e:"It outlawed segregation and discrimination in key areas."},
+      {q:"The Voting Rights Act of 1965 targeted…", c:["Factory safety","Barriers like literacy tests","Bank regulation","Foreign aid"], a:1, e:"It expanded federal enforcement to protect voting rights."},
+      {q:"The Vietnam War contributed to…", c:["Greater trust in government","Growing skepticism and protest movements","End of television","End of youth culture"], a:1, e:"The war widened credibility gaps and fueled massive protest."},
+      {q:"The Great Society is linked to…", c:["LBJ’s anti-poverty programs","Reaganomics","Nixon’s détente","Truman’s containment"], a:0, e:"It expanded social programs like Medicare and anti-poverty efforts."},
+      {q:"The “New Left” focused on…", c:["Business deregulation","Civil rights, antiwar activism, student movements","Imperial expansion","Ending elections"], a:1, e:"It emphasized social justice and opposition to war and inequality."},
+      {q:"Second-wave feminism sought…", c:["Voting rights only","Equality in workplace, education, and reproductive rights","Segregation","Monarchy"], a:1, e:"It expanded women’s rights activism beyond suffrage."},
+      {q:"The “Sunbelt” growth reflects…", c:["Population shift to South/West","End of suburbs","Decline of cars","No air conditioning"], a:0, e:"Jobs, defense spending, and climate drove migration to the South/West."},
+      {q:"Détente refers to…", c:["Increased tension","Reduced Cold War tensions through diplomacy","A civil rights tactic","A labor strike"], a:1, e:"It was a relaxation of tensions (e.g., Nixon era)."},
+      {q:"Watergate is significant because it…", c:["Increased trust in government","Deepened distrust and led to Nixon’s resignation","Ended Cold War","Ended Civil Rights"], a:1, e:"It exposed abuse of power and damaged confidence in leadership."},
+      {q:"The “Southern Strategy” is associated with…", c:["Democrats winning the North","Republicans appealing to white southern voters","Ending party realignment","Women’s rights"], a:1, e:"It contributed to political realignment in the South."},
+      {q:"The main goal of the civil rights movement’s nonviolent strategy was to…", c:["Avoid publicity","Expose injustice and gain moral/political support","End elections","Support segregation"], a:1, e:"Nonviolence aimed to win public sympathy and legal change."},
+      {q:"The Warren Court is often remembered for…", c:["Restricting civil liberties","Expanding civil liberties (rights of accused, desegregation)","Ending Supreme Court","Creating tariffs"], a:1, e:"Decisions expanded rights and liberties."},
+      {q:"The “credibility gap” refers to…", c:["Gap between rich and poor","Public doubt about government statements (especially Vietnam)","Gap in voting age","Gap in education"], a:1, e:"Contradictions fueled mistrust of official claims."},
+      {q:"A major continuity in Period 8 is…", c:["No change in culture","Ongoing debates over rights and the role of government","End of politics","No social movements"], a:1, e:"Rights, equality, and government power remained central debates."}
+    ],
+
+    period9: [
+      {q:"The “conservative resurgence” is most associated with…", c:["Increased New Deal regulation","A shift toward smaller-government arguments and traditional values","End of elections","Return to monarchy"], a:1, e:"From the late 1970s/1980s, conservatism gained power in national politics."},
+      {q:"Reaganomics generally emphasized…", c:["Higher taxes and regulation","Tax cuts, deregulation, and free-market approaches","Nationalizing industry","Ending defense spending"], a:1, e:"Supply-side policies aimed to stimulate growth through tax and regulatory reductions."},
+      {q:"Globalization is best described as…", c:["Countries isolating","Increasing worldwide economic and cultural connections","End of trade","End of immigration"], a:1, e:"It increases cross-border trade, investment, and cultural exchange."},
+      {q:"A major effect of globalization on some U.S. regions was…", c:["More manufacturing jobs","Deindustrialization and job losses","End of services","End of technology"], a:1, e:"Some manufacturing shifted overseas, hurting certain communities."},
+      {q:"The end of the Cold War is most closely tied to…", c:["Fall of Soviet influence and collapse of USSR","Start of WWI","New Deal","Louisiana Purchase"], a:0, e:"Soviet decline and collapse ended the bipolar Cold War structure."},
+      {q:"The rise of the internet most directly affected…", c:["Horse travel","Communication, media, and the economy","Ending elections","Ending globalization"], a:1, e:"Digital technology reshaped information, jobs, and politics."},
+      {q:"Political polarization refers to…", c:["Parties becoming more similar","Parties moving farther apart ideologically","End of parties","End of voting"], a:1, e:"Polarization increases ideological distance and partisan conflict."},
+      {q:"A major debate in Period 9 is over…", c:["Whether the U.S. should have colonies in 1607","Government’s role in economy and social issues","Whether to fight in WWII","Whether to ratify the Constitution"], a:1, e:"Policy debates focus on regulation, rights, taxation, and social policy."},
+      {q:"The War on Terror is associated with…", c:["1898","Early 21st-century security and foreign policy responses to terrorism","Civil War","Great Awakening"], a:1, e:"It shaped foreign policy and domestic security after major terrorist attacks."},
+      {q:"NAFTA is an example of…", c:["A civil rights law","A trade agreement","A Supreme Court case","A military alliance"], a:1, e:"It reduced trade barriers among the U.S., Canada, and Mexico."},
+      {q:"One reason immigration debates intensified was…", c:["No demographic change","Changing demographics and economic/cultural concerns","End of globalization","No elections"], a:1, e:"Migration affected labor markets, identity debates, and politics."},
+      {q:"Mass incarceration debates often relate to…", c:["Colonial trade","Crime policy and racial disparities","Erie Canal","Louisiana Purchase"], a:1, e:"Policy choices raised incarceration rates and raised equity concerns."},
+      {q:"A continuity from earlier periods to Period 9 is…", c:["No inequality","Debates over civil rights and equality","No social movements","End of activism"], a:1, e:"Rights struggles persist across U.S. history."},
+      {q:"A key economic trend in Period 9 is growth in…", c:["Agrarian subsistence","Service and technology sectors","Feudalism","Mercantilism"], a:1, e:"The economy shifted toward services, tech, and finance."},
+      {q:"The “culture wars” generally refer to conflicts over…", c:["Canal building","Social values and identity issues","Colonial settlement","Nullification"], a:1, e:"They include disputes over religion, education, rights, and national identity."},
+      {q:"Campaign finance and media changes contributed to…", c:["Less campaigning","New political strategies and polarization","End of elections","End of parties"], a:1, e:"Modern fundraising/media ecosystems changed how politics works."},
+      {q:"The main historical thinking skill for Period 9 questions is…", c:["Memorizing every headline","Identifying long-term trends and continuity/change","Ignoring evidence","Using only dates"], a:1, e:"APUSH focuses on patterns over time, not daily news."},
+      {q:"A major foreign policy pattern after 1980 is…", c:["No interventions","Ongoing U.S. global involvement (diplomacy, wars, alliances)","Isolationism only","End of alliances"], a:1, e:"The U.S. remained globally active through multiple administrations."},
+      {q:"Which best describes the relationship between technology and work in Period 9?", c:["No changes","Automation and digital tools reshaped jobs and skills","End of education","End of services"], a:1, e:"Tech created new industries while disrupting others."},
+      {q:"A key political realignment trend is…", c:["South remains solidly Democratic forever","The South shifts toward Republicans over time","No regional patterns","End of parties"], a:1, e:"Over decades, southern voting patterns shifted significantly."}
+    ]
+  };
+
+  function shuffle(arr) {
+    const a = arr.slice();
+    for (let i=a.length-1; i>0; i--) {
+      const j = Math.floor(Math.random() * (i+1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function mountQuiz(shell) {
+    const periodKey = shell.getAttribute('data-period');
+    const allQ = QUESTION_BANK[periodKey] || [];
+
+    shell.innerHTML = `
+      <div class="quizTop">
+        <div>
+          <h3 style="margin:0;"><span class="badge">Practice</span> Interactive Questions</h3>
+          <div class="quizMeta">Click an answer to get instant feedback and an explanation. (${allQ.length} questions)</div>
+        </div>
+        <div class="quizBtns">
+          <button class="btn btnSmall" data-action="startAll">Start All</button>
+          <button class="btnAlt btnSmall" data-action="start10">Random 10</button>
+          <button class="btnAlt btnSmall" data-action="reset">Reset</button>
+        </div>
+      </div>
+      <div class="pillRow">
+        <div class="pill">Mode: Instant Feedback</div>
+        <div class="pill" data-pill="score">Score: 0/0</div>
+        <div class="pill" data-pill="progress">Progress: 0/${allQ.length}</div>
+      </div>
+      <div class="qCard hidden" data-ui="qCard">
+        <div class="qStem" data-ui="stem"></div>
+        <div class="choices" data-ui="choices"></div>
+        <div class="explain hidden" data-ui="explain"></div>
+        <div class="pillRow">
+          <button class="btnAlt btnSmall" data-action="prev">◀ Prev</button>
+          <button class="btn btnSmall" data-action="next">Next ▶</button>
+        </div>
+      </div>
+    `;
+
+    let active = [];
+    let idx = 0;
+    let correct = 0;
+    let attempted = 0;
+    const answered = new Set();
+
+    const qCard = shell.querySelector('[data-ui="qCard"]');
+    const stem = shell.querySelector('[data-ui="stem"]');
+    const choices = shell.querySelector('[data-ui="choices"]');
+    const explain = shell.querySelector('[data-ui="explain"]');
+    const pillScore = shell.querySelector('[data-pill="score"]');
+    const pillProg = shell.querySelector('[data-pill="progress"]');
+
+    function updatePills() {
+      pillScore.textContent = `Score: ${correct}/${attempted}`;
+      pillProg.textContent = `Progress: ${Math.min(idx+1, active.length)}/${active.length || allQ.length}`;
+    }
+
+    function renderQuestion() {
+      if (!active.length) return;
+      qCard.classList.remove('hidden');
+      explain.classList.add('hidden');
+      explain.textContent = '';
+
+      const item = active[idx];
+      stem.textContent = `Q${idx+1}. ${item.q}`;
+
+      choices.innerHTML = '';
+      item.c.forEach((text, i) => {
+        const div = document.createElement('div');
+        div.className = 'choice';
+        div.setAttribute('role','button');
+        div.tabIndex = 0;
+        div.textContent = text;
+
+        div.addEventListener('click', () => pick(i, div));
+        div.addEventListener('keydown', (ev) => {
+          if (ev.key === 'Enter' || ev.key === ' ') pick(i, div);
+        });
+
+        choices.appendChild(div);
+      });
+      updatePills();
+    }
+
+    function lockChoices(correctIndex, selectedIndex) {
+      const nodes = Array.from(choices.children);
+      nodes.forEach((node, i) => {
+        node.style.pointerEvents = 'none';
+        if (i === correctIndex) node.classList.add('correct');
+        if (i === selectedIndex && selectedIndex !== correctIndex) node.classList.add('incorrect');
+      });
+    }
+
+    function pick(selectedIndex) {
+      const item = active[idx];
+      if (!item) return;
+      const key = `${periodKey}:${idx}`;
+      if (answered.has(key)) return; // prevent double scoring
+
+      answered.add(key);
+      attempted += 1;
+      const isCorrect = selectedIndex === item.a;
+      if (isCorrect) correct += 1;
+
+      lockChoices(item.a, selectedIndex);
+      explain.classList.remove('hidden');
+      explain.innerHTML = `<strong>${isCorrect ? 'Correct ✅' : 'Not quite ❌'}</strong><br>${item.e}`;
+      updatePills();
+    }
+
+    function start(mode) {
+      answered.clear();
+      correct = 0;
+      attempted = 0;
+      idx = 0;
+      active = (mode === '10') ? shuffle(allQ).slice(0, 10) : allQ.slice();
+      renderQuestion();
+      pillProg.textContent = `Progress: 1/${active.length}`;
+    }
+
+    function reset() {
+      answered.clear();
+      correct = 0;
+      attempted = 0;
+      idx = 0;
+      active = [];
+      qCard.classList.add('hidden');
+      pillScore.textContent = 'Score: 0/0';
+      pillProg.textContent = `Progress: 0/${allQ.length}`;
+    }
+
+    shell.addEventListener('click', (e) => {
+      const btn = e.target.closest('button');
+      if (!btn) return;
+      const action = btn.getAttribute('data-action');
+      if (!action) return;
+
+      if (action === 'startAll') start('all');
+      if (action === 'start10') start('10');
+      if (action === 'reset') reset();
+      if (action === 'next') { if (active.length) { idx = Math.min(idx+1, active.length-1); renderQuestion(); } }
+      if (action === 'prev') { if (active.length) { idx = Math.max(idx-1, 0); renderQuestion(); } }
+    });
+
+    // default collapsed until start
+    reset();
+  }
+
+  document.querySelectorAll('.quizShell').forEach(mountQuiz);
+</script>
 
 </body>
 </html>
